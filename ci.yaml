@@ -2,7 +2,7 @@ name: Docker CI Pipeline
 
 on:
   push:
-    branches: [ "main" ]   # तुमचा branch master असेल तर change करा
+    branches: [ "master" ]   # तुमचा branch master असेल तर change करा
 
 jobs:
   build:
