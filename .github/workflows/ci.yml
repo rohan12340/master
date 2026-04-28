@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu
 
     steps:
     # 1. Checkout
@@ -33,7 +33,7 @@ jobs:
       uses: appleboy/ssh-action@v1
       with:
         host: ${{ secrets.EC2_IP }}
-        username: ubuntu
+        username: ec2-user
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
           docker pull ${{ secrets.DOCKER_USERNAME }}/my-app:latest
