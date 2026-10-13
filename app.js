@@ -1,4 +1,4 @@
-const http = require("http");
+import http from "node:http";
 
 const HOST = "0.0.0.0";
 const PORT = Number(process.env.PORT) || 3000;
